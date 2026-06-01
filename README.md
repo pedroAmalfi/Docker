@@ -49,6 +49,20 @@ docker run hello-world
 
 Se a mensagem de sucesso for exibida, seu ambiente está pronto.
 
+Após executar:
+
+```bash
+docker run hello-world
+```
+
+você pode verificar se o Docker está ativo utilizando:
+
+```bash
+docker ps
+```
+
+Se nenhum erro for exibido, seu ambiente está pronto para executar o projeto.
+
 ---
 
 # Clonando o Repositório
@@ -63,6 +77,12 @@ Entre na pasta:
 
 ```bash
 cd Docker
+```
+
+Caso tenha baixado o projeto em formato ZIP pelo GitHub, descompacte o arquivo e entre na pasta:
+
+```bash
+cd Docker-main
 ```
 
 ---
