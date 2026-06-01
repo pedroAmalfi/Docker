@@ -30,7 +30,12 @@ resumo = {
 }
 
 with open("/app/output/metrics.json", "w") as arquivo:
-    json.dump(resumo, arquivo, indent=4)
+    json.dump(
+    resumo,
+    arquivo,
+    indent=4,
+    ensure_ascii=False
+)
 
 print("\nResultados obtidos:")
 print(df)
