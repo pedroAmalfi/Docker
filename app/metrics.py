@@ -4,6 +4,7 @@ import os
 
 
 def eh_primo(numero):
+
     if numero < 2:
         return False
 
