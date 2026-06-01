@@ -80,6 +80,7 @@ Docker/
 │   └── requirements.txt
 │
 ├── output/
+│   └── .gitkeep
 │
 ├── scripts/
 │   ├── start.sh
