@@ -300,6 +300,3 @@ docker compose up --build
 
 ---
 
-# Autor
-
-Projeto desenvolvido para fins educacionais na disciplina de Engenharia de Software / Análise de Algoritmos da FATEC.
