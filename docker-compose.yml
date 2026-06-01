@@ -1,6 +1,9 @@
 services:
+
   algoritmo:
+
     build: .
+
     container_name: fatec-algorithm-metrics
 
     volumes:
