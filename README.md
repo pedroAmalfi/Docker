@@ -71,17 +71,15 @@ cd Docker
 # Estrutura do Projeto
 
 ```text
-fatec-algorithm-metrics/
+Docker/
 │
 ├── app/
 │   ├── main.py
 │   ├── metrics.py
 │   ├── graph_generator.py
+│   └── requirements.txt
 │
 ├── output/
-│   ├── metrics.csv
-│   ├── metrics.json
-│   └── performance_graph.png
 │
 ├── scripts/
 │   ├── start.sh
@@ -89,6 +87,7 @@ fatec-algorithm-metrics/
 │
 ├── Dockerfile
 ├── docker-compose.yml
+├── .gitignore
 └── README.md
 ```
 
