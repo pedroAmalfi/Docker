@@ -1,1 +1,271 @@
-# Docker
+# FATEC - Laboratório de Análise de Desempenho de Algoritmos com Docker
+
+Repositório Oficial:
+
+https://github.com/pedroAmalfi/Docker
+
+## Objetivo
+
+Este projeto tem como objetivo demonstrar a utilização do Docker para execução de aplicações Python, coleta de métricas de desempenho e geração automática de gráficos para análise de algoritmos.
+
+O programa executa um algoritmo simples que:
+
+1. Sorteia 10 números aleatórios entre 1 e 100;
+2. Para cada número sorteado, encontra o N-ésimo número primo correspondente;
+3. Mede métricas de desempenho;
+4. Salva os resultados em arquivos CSV e JSON;
+5. Gera gráficos automaticamente.
+
+Posteriormente, os alunos poderão substituir este algoritmo pelos algoritmos desenvolvidos em sala de aula, como:
+
+- Dijkstra
+- A*
+- Mochila
+- Caixeiro Viajante
+- Menor Caminho
+- Busca em Grafos
+- Outros algoritmos
+
+---
+
+# Pré-requisitos
+
+Antes de iniciar, certifique-se de possuir:
+
+- Git instalado
+- Docker Desktop instalado
+
+---
+
+# Testando o Docker
+
+Antes de utilizar este projeto, verifique se o Docker está funcionando corretamente.
+
+Abra um terminal e execute:
+
+```bash
+docker run hello-world
+```
+
+Se a mensagem de sucesso for exibida, seu ambiente está pronto.
+
+---
+
+# Clonando o Repositório
+
+Execute o comando abaixo:
+
+```bash
+git clone https://github.com/pedroAmalfi/Docker.git
+```
+
+
+Entre na pasta:
+
+```bash
+cd Docker
+```
+
+---
+
+# Estrutura do Projeto
+
+```text
+fatec-algorithm-metrics/
+│
+├── app/
+│   ├── main.py
+│   ├── metrics.py
+│   ├── graph_generator.py
+│
+├── output/
+│   ├── metrics.csv
+│   ├── metrics.json
+│   └── performance_graph.png
+│
+├── scripts/
+│   ├── start.sh
+│   └── start.bat
+│
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+# Executando o Projeto
+
+## Windows
+
+Execute:
+
+```cmd
+scripts\start.bat
+```
+
+ou
+
+```cmd
+docker compose up --build
+```
+
+---
+
+## Linux / MacOS
+
+Execute:
+
+```bash
+chmod +x scripts/start.sh
+./scripts/start.sh
+```
+
+ou
+
+```bash
+docker compose up --build
+```
+
+---
+
+# O que acontece durante a execução
+
+O sistema irá:
+
+1. Gerar números aleatórios;
+2. Encontrar o N-ésimo número primo correspondente;
+3. Coletar métricas de desempenho;
+4. Gerar arquivos de saída.
+
+---
+
+# Métricas Coletadas
+
+O projeto registra:
+
+| Métrica | Descrição |
+|----------|------------|
+| Tempo de Execução | Tempo gasto para processar cada entrada |
+| Uso de CPU | Consumo de processamento |
+| Uso de Memória | Memória utilizada |
+| Pico de Memória | Maior consumo registrado |
+| Iterações | Quantidade de operações executadas |
+
+---
+
+# Arquivos Gerados
+
+Após a execução, os resultados estarão na pasta:
+
+```text
+output/
+```
+
+---
+
+## metrics.csv
+
+Contém os dados detalhados de cada execução.
+
+Exemplo:
+
+```csv
+entrada,primo,tempo_ms,cpu_percent,memoria_mb
+10,29,0.01,8,35
+20,71,0.05,10,36
+50,229,0.30,15,38
+```
+
+---
+
+## metrics.json
+
+Resumo estatístico da execução.
+
+Exemplo:
+
+```json
+{
+    "tempo_medio_ms": 0.12,
+    "cpu_media": 11.5,
+    "memoria_media_mb": 36.8
+}
+```
+
+---
+
+## performance_graph.png
+
+Gráfico gerado automaticamente mostrando a relação entre:
+
+- Entrada
+- Tempo
+- CPU
+- Memória
+
+---
+
+# Como Interpretar os Resultados
+
+Observe que:
+
+- Entradas maiores exigem mais processamento;
+- O tempo de execução tende a aumentar;
+- O número de operações cresce;
+- O consumo de recursos pode aumentar.
+
+Essas informações ajudam a compreender o comportamento dos algoritmos.
+
+---
+
+# Personalizando para o seu Projeto
+
+O algoritmo principal está localizado em:
+
+```text
+app/main.py
+```
+
+Você pode substituir a função:
+
+```python
+encontrar_n_esimo_primo()
+```
+
+por qualquer algoritmo desenvolvido na disciplina.
+
+Exemplos:
+
+- Dijkstra
+- A*
+- Mochila
+- Caixeiro Viajante
+- Busca em Largura
+- Busca em Profundidade
+
+Toda a infraestrutura de métricas continuará funcionando automaticamente.
+
+---
+
+# Limpando os Containers
+
+Caso necessário:
+
+```bash
+docker compose down
+```
+
+---
+
+# Recriando o Ambiente
+
+```bash
+docker compose up --build
+```
+
+---
+
+# Autor
+
+Projeto desenvolvido para fins educacionais na disciplina de Engenharia de Software / Análise de Algoritmos da FATEC.
