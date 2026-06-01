@@ -147,10 +147,8 @@ O projeto registra:
 | Métrica | Descrição |
 |----------|------------|
 | Tempo de Execução | Tempo gasto para processar cada entrada |
-| Uso de CPU | Consumo de processamento |
-| Uso de Memória | Memória utilizada |
-| Pico de Memória | Maior consumo registrado |
-| Iterações | Quantidade de operações executadas |
+| Memória Utilizada | Diferença observada durante a execução |
+| Iterações | Quantidade de verificações realizadas pelo algoritmo |
 
 ---
 
@@ -160,6 +158,11 @@ Após a execução, os resultados estarão na pasta:
 
 ```text
 output/
+│
+├── metrics.csv
+├── metrics.json
+├── performance_graph.png
+└── iterations_graph.png
 ```
 
 ---
@@ -171,10 +174,10 @@ Contém os dados detalhados de cada execução.
 Exemplo:
 
 ```csv
-entrada,primo,tempo_ms,cpu_percent,memoria_mb
-10,29,0.01,8,35
-20,71,0.05,10,36
-50,229,0.30,15,38
+entrada,primo,tempo_ms,memoria_mb,iteracoes
+120,659,1.23,0.00,658
+340,2287,8.41,0.00,2286
+785,5987,31.55,0.00,5986
 ```
 
 ---
