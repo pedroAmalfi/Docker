@@ -10,7 +10,7 @@ Este projeto tem como objetivo demonstrar a utilização do Docker para execuç�
 
 O programa executa um algoritmo simples que:
 
-1. Sorteia 10 números aleatórios entre 1 e 100;
+1. Sorteia 10 números aleatórios entre 100 e 1000;
 2. Para cada número sorteado, encontra o N-ésimo número primo correspondente;
 3. Mede métricas de desempenho;
 4. Salva os resultados em arquivos CSV e JSON;
@@ -18,13 +18,13 @@ O programa executa um algoritmo simples que:
 
 Posteriormente, os alunos poderão substituir este algoritmo pelos algoritmos desenvolvidos em sala de aula, como:
 
-- Dijkstra
-- A*
-- Mochila
-- Caixeiro Viajante
-- Menor Caminho
-- Busca em Grafos
-- Outros algoritmos
+* Dijkstra
+* A*
+* Mochila
+* Caixeiro Viajante
+* Menor Caminho
+* Busca em Grafos
+* Outros algoritmos
 
 ---
 
@@ -32,8 +32,8 @@ Posteriormente, os alunos poderão substituir este algoritmo pelos algoritmos de
 
 Antes de iniciar, certifique-se de possuir:
 
-- Git instalado
-- Docker Desktop instalado
+* Git instalado
+* Docker Desktop instalado
 
 ---
 
@@ -58,7 +58,6 @@ Execute o comando abaixo:
 ```bash
 git clone https://github.com/pedroAmalfi/Docker.git
 ```
-
 
 Entre na pasta:
 
@@ -144,11 +143,11 @@ O sistema irá:
 
 O projeto registra:
 
-| Métrica | Descrição |
-|----------|------------|
-| Tempo de Execução | Tempo gasto para processar cada entrada |
-| Memória Utilizada | Diferença observada durante a execução |
-| Iterações | Quantidade de verificações realizadas pelo algoritmo |
+| Métrica           | Descrição                                            |
+| ----------------- | ---------------------------------------------------- |
+| Tempo de Execução | Tempo gasto para processar cada entrada              |
+| Memória Utilizada | Diferença observada durante a execução               |
+| Iterações         | Quantidade de verificações realizadas pelo algoritmo |
 
 ---
 
@@ -190,9 +189,10 @@ Exemplo:
 
 ```json
 {
-    "tempo_medio_ms": 0.12,
-    "cpu_media": 11.5,
-    "memoria_media_mb": 36.8
+    "numeros_sorteados": [120, 340, 785],
+    "tempo_medio_ms": 13.73,
+    "memoria_media_mb": 0.00,
+    "iteracoes_media": 2976.67
 }
 ```
 
@@ -202,10 +202,21 @@ Exemplo:
 
 Gráfico gerado automaticamente mostrando a relação entre:
 
-- Entrada
-- Tempo
-- CPU
-- Memória
+* Entrada
+* Tempo de Execução
+
+Este gráfico permite visualizar como o tempo de processamento tende a aumentar conforme cresce o tamanho da entrada.
+
+---
+
+## iterations_graph.png
+
+Gráfico gerado automaticamente mostrando a relação entre:
+
+* Entrada
+* Quantidade de Iterações
+
+Este gráfico é especialmente útil para visualizar o crescimento do esforço computacional do algoritmo independentemente do hardware utilizado.
 
 ---
 
@@ -213,10 +224,10 @@ Gráfico gerado automaticamente mostrando a relação entre:
 
 Observe que:
 
-- Entradas maiores exigem mais processamento;
-- O tempo de execução tende a aumentar;
-- O número de operações cresce;
-- O consumo de recursos pode aumentar.
+* Entradas maiores exigem mais processamento;
+* O tempo de execução tende a aumentar;
+* O número de operações cresce;
+* O consumo de recursos pode aumentar.
 
 Essas informações ajudam a compreender o comportamento dos algoritmos.
 
@@ -240,12 +251,12 @@ por qualquer algoritmo desenvolvido na disciplina.
 
 Exemplos:
 
-- Dijkstra
-- A*
-- Mochila
-- Caixeiro Viajante
-- Busca em Largura
-- Busca em Profundidade
+* Dijkstra
+* A*
+* Mochila
+* Caixeiro Viajante
+* Busca em Largura
+* Busca em Profundidade
 
 Toda a infraestrutura de métricas continuará funcionando automaticamente.
 
