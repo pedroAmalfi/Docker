@@ -4,6 +4,142 @@ Repositório Oficial:
 
 https://github.com/pedroAmalfi/Docker
 
+
+# O que é Docker?
+
+O Docker é uma plataforma que permite executar aplicações dentro de ambientes isolados chamados **containers**.
+
+Um container pode ser imaginado como uma "caixa" que contém tudo o que uma aplicação precisa para funcionar:
+
+* Código-fonte
+* Bibliotecas
+* Dependências
+* Configurações
+* Sistema operacional básico
+
+Dessa forma, a aplicação funciona da mesma maneira em qualquer computador que possua o Docker instalado.
+
+---
+
+# Por que utilizar Docker?
+
+Durante o desenvolvimento de software é comum ocorrer a seguinte situação:
+
+> "Na minha máquina funciona, mas na sua não."
+
+Isso acontece porque cada computador possui configurações diferentes, versões diferentes de programas e bibliotecas instaladas.
+
+O Docker resolve esse problema criando um ambiente padronizado para todos os usuários.
+
+Assim, todos os alunos utilizarão exatamente o mesmo ambiente de execução.
+
+---
+
+# O que é um Container?
+
+Um container é uma instância em execução de uma aplicação.
+
+Podemos imaginar:
+
+* Computador = Casa
+* Docker = Condomínio
+* Container = Apartamento
+
+Cada apartamento possui seus próprios recursos e funciona de forma independente dos demais.
+
+Da mesma forma, cada container executa sua aplicação de forma isolada.
+
+---
+
+# O que é uma Imagem?
+
+Uma imagem Docker funciona como uma receita ou modelo para criar containers.
+
+Por exemplo:
+
+* Imagem Python
+* Imagem Ubuntu
+* Imagem PostgreSQL
+
+Quando executamos uma imagem, o Docker cria um container baseado nela.
+
+---
+
+# Como o Docker será utilizado neste projeto?
+
+Neste laboratório utilizaremos o Docker para executar uma aplicação Python sem a necessidade de instalar:
+
+* Python
+* Pandas
+* Matplotlib
+* Psutil
+
+Todas essas dependências já estão configuradas dentro do container.
+
+O aluno precisará apenas:
+
+1. Clonar o repositório;
+2. Executar o Docker;
+3. Rodar o projeto.
+
+---
+
+# Fluxo de Execução do Projeto
+
+O funcionamento deste laboratório ocorre da seguinte forma:
+
+```text
+Aluno
+   │
+   ▼
+Git Clone
+   │
+   ▼
+Docker Compose
+   │
+   ▼
+Criação do Container
+   │
+   ▼
+Execução do Python
+   │
+   ▼
+Coleta de Métricas
+   │
+   ▼
+Geração dos Arquivos
+   │
+   ├── metrics.csv
+   ├── metrics.json
+   ├── performance_graph.png
+   └── iterations_graph.png
+```
+
+---
+
+# Vantagens do Docker
+
+Utilizando Docker conseguimos:
+
+* Padronizar o ambiente de execução;
+* Evitar problemas de instalação;
+* Facilitar a distribuição do projeto;
+* Reproduzir experimentos de forma consistente;
+* Aproximar o desenvolvimento do ambiente utilizado pelas empresas.
+
+---
+
+# Objetivo deste Laboratório
+
+Além de aprender conceitos de análise de algoritmos e métricas de desempenho, os alunos terão contato com uma das tecnologias mais utilizadas atualmente em:
+
+* Desenvolvimento de Software;
+* DevOps;
+* Computação em Nuvem (Cloud Computing);
+* Integração e Entrega Contínua (CI/CD);
+* Engenharia de Software.
+
+
 ## Objetivo
 
 Este projeto tem como objetivo demonstrar a utilização do Docker para execução de aplicações Python, coleta de métricas de desempenho e geração automática de gráficos para análise de algoritmos.
