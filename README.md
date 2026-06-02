@@ -264,7 +264,15 @@ ou
 ```cmd
 docker compose up --build
 ```
+Como na imagem abaixo:
+ - ![Executando o comando](https://github.com/pedroAmalfi/Docker/blob/main/imagens/executar.PNG?raw=true)
 
+ Ao executar será inicializado o container e a instalação de suas dependências e, se tudo der certo, aparecerá uma imagem como abaixo:
+  - ![Comando Finalizado](https://github.com/pedroAmalfi/Docker/blob/main/imagens/Fim_execucao.PNG?raw=true)
+
+Podem ver no Docker Desktop que existem dois container (hello_word e docker) como imagem abaixo:
+
+  - ![Containers Criados](https://github.com/pedroAmalfi/Docker/blob/main/imagens/Img_Docker.PNG?raw=true)
 ---
 
 ## Linux / MacOS
@@ -362,6 +370,10 @@ Gráfico gerado automaticamente mostrando a relação entre:
 * Tempo de Execução
 
 Este gráfico permite visualizar como o tempo de processamento tende a aumentar conforme cresce o tamanho da entrada.
+
+Como pode ser visto na imagem abaixo:
+
+- ![Dados de Saída](https://github.com/pedroAmalfi/Docker/blob/main/imagens/Saida.PNG?raw=true)
 
 ---
 
